@@ -102,7 +102,7 @@ const Skills = () => {
               <p className="text-lg">
               Technology continually evolves, driving innovation and transforming industries. Staying updated with technology is crucial for leveraging its benefits and staying competitive in a rapidly changing world.
               </p>
-              <button className=" text-2xl px-4 py-2 bg-orange-500 rounded-full shadow-lg">
+              <button className=" text-xl px-4 py-2 bg-orange-500 rounded-full hover:shadow-lg">
                 Hire Me
               </button>
             </div>
