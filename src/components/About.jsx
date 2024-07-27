@@ -7,10 +7,10 @@ function About() {
     title: "Software Engineer & Java Developer",
     desc1: `My goal is to leverage my skills to create impactful software that enhances user experience and solves real-world problems.`,
     desc2: `I am Saurabh Sawant, a passionate and dedicated software engineer with a B.Tech in Information Technology from Pillai College of Engineering. With a strong technical foundation in Java, JavaScript, React JS, and more, I specialize in developing and maintaining innovative software solutions. Currently working at Newgen Software Technologies Limited, I have experience in Fintech solutions, specifically in the Trade & Finance domain and Bank Account Opening Processes. I am a quick learner, adaptable, and committed to continuous self-development.`,
-    actionButton: {
-      title: "Read More...",
-      link: '/readmore'
-    }
+    // actionButton: {
+    //   title: "Read More...",
+    //   link: '/readmore'
+    // }
   });
 
   return (
@@ -29,11 +29,11 @@ function About() {
             <p className="text-sm sm:text-base md:text-lg lg:text-xl">{values.desc1}</p>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg">{values.desc2}</p>
             <div className="mt-6"> {/* Added margin-top for button spacing */}
-              <a href={values.actionButton.link}>
+              {/* <a href={values.actionButton.link}>
                 <button className="bg-orange-500 px-4 py-2 text-sm sm:text-base md:text-lg lg:text-xl hover:shadow-lg text-white rounded-lg">
                   {values.actionButton.title}
                 </button>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
