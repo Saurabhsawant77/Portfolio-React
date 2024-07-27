@@ -30,9 +30,9 @@ const Github = () => {
       <h1 className="text-center text-3xl pt-4">Github Repositories</h1>
       {error && <p>{error}</p>}
 
-    <div className="flex w-full p-4 m-4">
+    <div className="flex w-full p-4 m-4 flex-wrap">
         {repos.map((repo, index) => (
-          <div key={index} className="bg-slate-400 shadow-lg rounded-lg hover:bg-gray-500 hover:text-white w-full m-4 px-3 py-3 items-center flex-wrap">
+          <div key={index} className="bg-slate-400 shadow-lg rounded-lg hover:bg-gray-500 hover:text-white w-full m-4 px-3 py-3 items-center ">
             <a href={urls[index]} target="_blank" rel="noopener noreferrer">
              <p> {repo} </p>
             </a>
