@@ -14,7 +14,7 @@ function About() {
   });
 
   return (
-    <div className="about-container bg-gray-100 py-10 border border-gray-300">
+    <div className="about-container bg-gray-100 py-10 border border-gray-300" id="about">
       <h1 className="text-3xl md:text-4xl lg:text-4xl text-center mb-8 hover:text-orange-500">About me</h1>
       <div className="flex flex-col lg:flex-row lg:justify-between items-center lg:items-start mx-4 lg:mx-10">
         {/* Image container */}

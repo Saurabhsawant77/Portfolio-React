@@ -83,7 +83,7 @@ import bannerBackground from "../assets/banner_wallpaper.svg";
 const Skills = () => {
   return (
     <>
-      <div className="mt-2">
+      <div className="mt-2" id="skills">
         <h1 className=" mb-16 text-4xl  text-center">
           My Skills
         </h1>
@@ -102,9 +102,12 @@ const Skills = () => {
               <p className="text-lg">
               Technology continually evolves, driving innovation and transforming industries. Staying updated with technology is crucial for leveraging its benefits and staying competitive in a rapidly changing world.
               </p>
-              <button className=" text-xl px-4 py-2 bg-orange-500 rounded-full hover:shadow-lg">
+              <a href="mailto:saurabhsawant077@gmail.com " className="px-4 py-2 ">
+              <button className=" text-xl px-4 py-2 mt-2 bg-orange-500 rounded-full hover:shadow-lg">
+
                 Hire Me
               </button>
+              </a>
             </div>
           </div>
           <div className="flex justify-center">

@@ -1,61 +1,52 @@
 import React, { useState } from 'react'
 
 function Header() {
-    const [brandName,setBrandName] = useState("Saurabh Swant")
-    const [menuLinks,setmenuLinks] = useState([
-        {
-            title:"Home",
-            link:"/home",
-            id:1,
-        },
-        {
-            title:"About",
-            link:"/about",
-            id:2,
-        },
-        {
-            title:"Portfolio",
-            link:"/portfolio",
-            id:3,
-        },
-        {
-            title:"Contact",
-            link:"/contact",
-            id:4,
-        }
-    ])
+    const [brandName, setBrandName] = useState("Saurabh Swant");
+    const [menuLinks, setMenuLinks] = useState([
+        { title: "Home", link: "#home", id: 1 },
+        { title: "About", link: "#about", id: 2 },
+        { title: "Services", link: "#services", id: 3 },
+        { title: "Skills", link: "#skills", id: 4 },
+        { title: "Contact", link: "#contact", id: 5 }
+    ]);
 
-    const [actionButton,setactionButton] = useState({
-        title:"Hire Me",
-        link:`saurabhsawant077@gmail.com`,
-    })
-  return (
-    <>
-    <div className="main flex bg-gray-100 h-15 items-center p-7 w-full justify-between">
-        <div>
-            {/* {Brand Logo} */}
-            <h1 className="text-2xl font-bold font-serif">Saur<span className="bg-orange-300 font-bold p-2 rounded-lg m-0">HUB</span></h1>
-        </div>
+    const [actionButton, setActionButton] = useState({
+        title: "Hire Me",
+        link: `saurabhsawant077@gmail.com`
+    });
 
-        <div className="space-x-4 text-base">
-            {/* {menu links} */}
-            {menuLinks.map((link)=>(
-                <a key={link.id} href={link.link} className="hover:text-orange-400 hover:bg-gray-500 rounded-lg p-4">{link.title}</a>
-            ))}   
-            {/* <a href="/home" className="hover:text-orange-400 hover:bg-gray-500 rounded-lg p-4">Home</a> */}
-            {/* <a href="/about" className="hover:text-orange-400 hover:bg-gray-500 rounded-lg p-4">About</a>
-            <a href="/portfolio" className="hover:text-orange-400 hover:bg-gray-500 rounded-lg p-4">Portfolio</a>
-            <a href="/contact" className="hover:text-orange-400 hover:bg-gray-500 rounded-lg p-4">Contact</a> */}
-        </div>
+    return (
+        <>
+            <header className="bg-gray-100 p-4 w-full">
+                <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between">
+                    {/* Brand Logo */}
+                    <div className="text-2xl font-bold font-serif mb-4 sm:mb-0">
+                        <h1>
+                            Saur<span className="bg-orange-300 font-bold p-2 rounded-lg">HUB</span>
+                        </h1>
+                    </div>
 
-        <div>
-            {/* {button links} */}
-           <a href={`mailto:${actionButton.link}`}> <button  className="bg-purple-400 p-4 m-auto rounded-lg hover:shadow-xl hover:font-semibold text-lg">{actionButton.title}</button></a>
-        </div>
-        
-    </div>
-    </>
-  )
+                    {/* Menu Links */}
+                    <nav className="  flex flex-col sm:flex-row sm:space-x-4 text-base mb-4 sm:mb-0 text-center">
+                        {menuLinks.map((link) => (
+                            <a key={link.id} href={link.link} className="hover:text-orange-400 hover:bg-gray-500 rounded-lg p-2 sm:p-4">
+                                {link.title}
+                            </a>
+                        ))}
+                    </nav>
+
+                    {/* Action Button */}
+                    <div>
+                        <a href={`mailto:${actionButton.link}`}>
+                            <button className="bg-purple-400 p-2 sm:p-4 rounded-lg hover:shadow-xl hover:font-semibold text-sm sm:text-lg">
+                                {actionButton.title}
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </>
+    )
 }
 
-export default Header
+export default Header;

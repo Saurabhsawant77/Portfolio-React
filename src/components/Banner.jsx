@@ -47,11 +47,11 @@ function Banner() {
                     <a className="bg-gray-700 w-12 h-12 cursor-pointer border-white rounded-full flex justify-center items-center hover:shadow-lg" href="https://www.linkedin.com/in/saurabhsawant077/" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands text-2xl fa-linkedin"></i>
                     </a>
-                    <a className="bg-gray-700 w-12 h-12 cursor-pointer border-white rounded-full flex justify-center items-center hover:shadow-lg">
-                    <i class="fa-brands text-2xl fa-instagram"></i>
+                    <a href="https://github.com/Saurabhsawant77" target="_blank" rel="noopener noreferrer"  className="bg-gray-700 w-12 h-12 cursor-pointer border-white rounded-full flex justify-center items-center hover:shadow-lg">
+                    <i class="fa-brands text-2xl fa-github"></i>
                     </a>
                     <a className="bg-gray-700 w-12 h-12 cursor-pointer border-white rounded-full flex justify-center items-center hover:shadow-lg">
-                    <i class="fa-brands text-2xl fa-x-twitter"></i>
+                    <i class="fa-brands text-2xl fa-instagram"></i>
                     </a>
                 
                 
@@ -59,7 +59,8 @@ function Banner() {
                 </div>
 
                 <br />
-            <a className="px-3 py-2 hover:shadow-lg hover:text-black bg-orange-400 rounded-lg text-xl" href={resume} target="_blank" rel="noopener noreferrer">Download Cv</a>
+            <a className=" " href={resume} target="_blank" rel="noopener noreferrer"><button className=" mb-4 px-3 py-2 hover:shadow-lg hover:text-black bg-orange-400 rounded-lg text-xl"> Download Cv</button></a>
+
             </div>
         </div>
 
@@ -67,7 +68,7 @@ function Banner() {
 
         <div className="w-full flex justify-center items-center p-2">
             {/* {image} */}
-            <img className="w-1/2 rounded-full shadow-lg " src={bannerImage} alt="My Image" />
+            <img className="sm:w-1/2 rounded-full shadow-lg " src={bannerImage} alt="My Image" />
         </div>
     </div>
     </>
