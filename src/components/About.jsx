@@ -1,45 +1,117 @@
-import React, { useState } from 'react';
-import bannerImage from '../assets/bi2.jpg';
-
-function About() {
-  const [values, setValues] = useState({
-    image: bannerImage,
-    title: "Software Engineer & Java Developer",
-    desc1: `My goal is to leverage my skills to create impactful software that enhances user experience and solves real-world problems.`,
-    desc2: `I am Saurabh Sawant, a passionate and dedicated software engineer with a B.Tech in Information Technology from Pillai College of Engineering. With a strong technical foundation in Java, JavaScript, React JS, and more, I specialize in developing and maintaining innovative software solutions. Currently working at Newgen Software Technologies Limited, I have experience in Fintech solutions, specifically in the Trade & Finance domain and Bank Account Opening Processes. I am a quick learner, adaptable, and committed to continuous self-development.`,
-    // actionButton: {
-    //   title: "Read More...",
-    //   link: '/readmore'
-    // }
-  });
+export default function About() {
+  const facts = [
+    { icon: "🎓", label: "Education", value: "B.Tech IT — CGPA 9.54" },
+    { icon: "📍", label: "Location", value: "Mumbai, India" },
+    { icon: "🌐", label: "Languages", value: "English, Hindi, Marathi, German" },
+    { icon: "⚡", label: "Focus", value: "Backend & Distributed Systems" },
+  ];
 
   return (
-    <div className="about-container bg-gray-100 py-10 border border-gray-300" id="about">
-      <h1 className="text-3xl md:text-4xl lg:text-4xl text-center mb-8 hover:text-orange-500">About me</h1>
-      <div className="flex flex-col lg:flex-row lg:justify-between items-center lg:items-start mx-4 lg:mx-10">
-        {/* Image container */}
-        <div className="max-w-xl flex justify-center mb-8 lg:mb-0">
-          <img className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-full" src={values.image} alt="Saurabh Sawant" />
+    <section id="about" className="section">
+      <div className="section-num">01 — About</div>
+      <div className="section-eyebrow">Who I am</div>
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr",
+        gap: "4rem",
+        alignItems: "start",
+      }}>
+        {/* Text */}
+        <div>
+          <h2 style={{
+            fontFamily: "'Syne', sans-serif",
+            fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
+            fontWeight: 700, color: "#fff",
+            letterSpacing: "-0.5px", marginBottom: "1.5rem",
+          }}>
+            Building systems that <br />
+            <span style={{ color: "#4FFFA0" }}>scale and perform.</span>
+          </h2>
+
+          <p style={{ fontSize: "0.95rem", lineHeight: 1.9, color: "#7A8898", marginBottom: "1rem" }}>
+            I'm a Software Engineer specialising in backend systems — REST APIs, microservices, and
+            distributed architectures that handle real-world traffic. Currently at{" "}
+            <span style={{ color: "#E8EDF2", fontWeight: 500 }}>Wybrid Technologies</span>, where I
+            architect and optimise the backend infrastructure powering SaaS HR and workspace products.
+          </p>
+
+          <p style={{ fontSize: "0.95rem", lineHeight: 1.9, color: "#7A8898", marginBottom: "2rem" }}>
+            Previously at <span style={{ color: "#E8EDF2", fontWeight: 500 }}>Newgen Software Technologies</span>,
+            I worked on enterprise FinTech banking applications serving large-scale trade finance operations.
+            I care deeply about clean code, API design, and performance optimisation.
+          </p>
+
+          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+            <a href="https://www.linkedin.com/in/saurabhsawant077/" target="_blank" rel="noreferrer"
+               className="btn-ghost" style={{ fontSize: "0.75rem" }}>
+              LinkedIn ↗
+            </a>
+            <a href="mailto:saurabhsawant077@gmail.com" className="btn-primary"
+               style={{ fontSize: "0.75rem" }}>
+              Get In Touch
+            </a>
+          </div>
         </div>
 
-        {/* Text container */}
-        <div className="p-4 sm:p-6 md:p-8 lg:p-10 w-full lg:w-1/2 text-center lg:text-left">
-          <div className="space-y-6"> {/* Increased space between elements */}
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">{values.title}</h1>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl">{values.desc1}</p>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg">{values.desc2}</p>
-            <div className="mt-6"> {/* Added margin-top for button spacing */}
-              {/* <a href={values.actionButton.link}>
-                <button className="bg-orange-500 px-4 py-2 text-sm sm:text-base md:text-lg lg:text-xl hover:shadow-lg text-white rounded-lg">
-                  {values.actionButton.title}
-                </button>
-              </a> */}
+        {/* Facts grid */}
+        <div style={{
+          display: "grid", gridTemplateColumns: "1fr 1fr",
+          gap: 1, background: "rgba(255,255,255,0.05)",
+          border: "1px solid rgba(255,255,255,0.05)",
+          borderRadius: 12, overflow: "hidden",
+        }}>
+          {facts.map((f) => (
+            <div key={f.label} className="card" style={{
+              borderRadius: 0, border: "none",
+              padding: "1.5rem",
+            }}>
+              <div style={{ fontSize: "1.5rem", marginBottom: "0.6rem" }}>{f.icon}</div>
+              <div style={{
+                fontFamily: "'DM Mono', monospace",
+                fontSize: "0.65rem", letterSpacing: "1.5px",
+                textTransform: "uppercase", color: "#4B5563",
+                marginBottom: "0.3rem",
+              }}>{f.label}</div>
+              <div style={{
+                fontFamily: "'Syne', sans-serif",
+                fontSize: "0.88rem", fontWeight: 600, color: "#E8EDF2",
+              }}>{f.value}</div>
+            </div>
+          ))}
+
+          {/* Soft skills full-width */}
+          <div className="card" style={{
+            borderRadius: 0, border: "none",
+            padding: "1.5rem", gridColumn: "span 2",
+            borderTop: "1px solid rgba(255,255,255,0.05)",
+          }}>
+            <div style={{
+              fontFamily: "'DM Mono', monospace",
+              fontSize: "0.65rem", letterSpacing: "1.5px",
+              textTransform: "uppercase", color: "#4B5563",
+              marginBottom: "0.8rem",
+            }}>🧠 Soft Skills</div>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
+              {["Problem Solving", "Analytical Thinking", "Ownership & Accountability",
+                "Cross-Team Communication", "Agile / Scrum"].map(s => (
+                <span key={s} style={{
+                  fontFamily: "'DM Mono', monospace",
+                  fontSize: "0.68rem", color: "#7A8898",
+                  background: "rgba(255,255,255,0.04)",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  padding: "4px 10px", borderRadius: 4,
+                }}>{s}</span>
+              ))}
             </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          #about > div:last-child { grid-template-columns: 1fr !important; gap: 2rem !important; }
+        }
+      `}</style>
+    </section>
   );
 }
-
-export default About;

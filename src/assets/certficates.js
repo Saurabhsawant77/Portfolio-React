@@ -3,7 +3,7 @@ import SQL_udemy from '../assets/SQL_UDEMY.png';
 import PYTHON_infosys from '../assets/PYTHON_INFOSYS.png';
 import GCP_gdsc from '../assets/GCP_GDSC.png';
 
-export const certificate = [{
+export const certificates = [{
     image : JAVA_udemy,
     title : "Java Developement",
     description : "Basics to Advance Java Course"

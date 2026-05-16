@@ -1,29 +1,47 @@
-const Footer = () => {
+export default function Footer() {
   return (
-      <>
-          <div className="py-5 border bg-gray-100 flex flex-col sm:flex-row justify-between px-4 sm:px-12 md:px-24 lg:px-72" id="contact">
-              <div className="text-center sm:text-left mb-4 sm:mb-0">
-                  <p>
-                      @2024 Saurabh Sawant <span className="font-semibold">All Rights Reserved</span>
-                  </p>
-              </div>
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-5 text-center sm:text-left">
-                  <a href="#about" className="flex items-center justify-center sm:justify-start hover:underline">
-                      <i className="fa-solid text-xl fa-address-card"></i>
-                      <span className="ml-2">About</span>
-                  </a>
-                  <a href="mailto:saurabhsawant077@gmail.com" className="flex items-center justify-center sm:justify-start hover:underline">
-                      <i className="fa-solid text-xl fa-square-envelope"></i>
-                      <span className="ml-2">saurabhsawant077@gmail.com</span>
-                  </a>
-                  <a href="/about" className="flex items-center justify-center sm:justify-start hover:underline">
-                      <i className="fa-solid text-lg fa-phone"></i>
-                      <span className="ml-2">+91 8828357179</span>
-                  </a>
-              </div>
-          </div>
-      </>
-  );
-};
+    <footer style={{
+      borderTop: "1px solid rgba(255,255,255,0.06)",
+      padding: "2rem",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      maxWidth: 1100,
+      margin: "0 auto",
+      flexWrap: "wrap",
+      gap: "1rem",
+    }}>
+      <div style={{
+        fontFamily: "'Syne', sans-serif",
+        fontWeight: 800, fontSize: "1rem", color: "#fff",
+      }}>
+        S<span style={{ color: "#4FFFA0" }}>.</span>Sawant
+      </div>
 
-export default Footer;
+      <div style={{
+        fontFamily: "'DM Mono', monospace",
+        fontSize: "0.68rem", color: "#2A3441",
+        letterSpacing: "1px",
+      }}>
+        © {new Date().getFullYear()} Saurabh Sawant — Built with React & Vite
+      </div>
+
+      <div style={{ display: "flex", gap: "1.5rem" }}>
+        {[
+          ["GH", "https://github.com/Saurabhsawant77"],
+          ["LI", "https://www.linkedin.com/in/saurabhsawant077/"],
+          ["✉", "mailto:saurabhsawant077@gmail.com"],
+        ].map(([l, h]) => (
+          <a key={l} href={h} target="_blank" rel="noreferrer" style={{
+            fontFamily: "'DM Mono', monospace",
+            fontSize: "0.72rem", color: "#4B5563",
+            textDecoration: "none", transition: "color 0.2s",
+          }}
+          onMouseEnter={e => e.target.style.color = "#4FFFA0"}
+          onMouseLeave={e => e.target.style.color = "#4B5563"}
+          >{l}</a>
+        ))}
+      </div>
+    </footer>
+  );
+}

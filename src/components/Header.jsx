@@ -12,7 +12,7 @@ function Header() {
 
     const [actionButton, setActionButton] = useState({
         title: "Hire Me",
-        link: `saurabhsawant077@gmail.com`
+        link: 'Portfolio-React/src/assets/saurabh-sawant-resume-s.pdf'
     });
 
     return (
